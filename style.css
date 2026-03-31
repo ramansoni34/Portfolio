@@ -94,6 +94,14 @@ nav a:active{
   box-shadow: 4px 4px 0px #000;
 }
 
+@media (max-width: 600px){
+  #theme-toggle{
+    right: auto;
+    left: 20px;
+    top: 80px;
+  }
+}
+
 .container {
   max-width: 1200px;
   margin: auto;
@@ -409,9 +417,21 @@ p {
 .contact-links{
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 12px;
   margin-top: 15px;
   flex-wrap: wrap;
+}
+
+@media (max-width: 600px){
+  .contact-links{
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .contact-links a{
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 .contact-links a {
