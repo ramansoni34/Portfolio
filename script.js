@@ -160,16 +160,37 @@ avatar.addEventListener("mouseleave", () => {
   });
 });
 
-const cursor = document.querySelector(".cursor");
+if (window.innerWidth > 768) {
+  const cursor = document.querySelector(".cursor");
 
-document.addEventListener("mousemove", (e) => {
-  gsap.to(cursor, {
-    x: e.clientX,
-    y: e.clientY,
-    duration: 0.1
+  document.addEventListener("mousemove", (e) => {
+    gsap.to(cursor, {
+      x: e.clientX,
+      y: e.clientY,
+      duration: 0.1
+    });
   });
-});
 
+  const links = document.querySelectorAll("a, button");
+
+  links.forEach((el) => {
+    el.addEventListener("mouseenter", () => {
+      gsap.to(cursor, {
+        scale: 1.8,
+        backgroundColor: "#000",
+        duration: 0.2
+      });
+    });
+
+    el.addEventListener("mouseleave", () => {
+      gsap.to(cursor, {
+        scale: 1,
+        backgroundColor: "transparent",
+        duration: 0.2
+      });
+    });
+  });
+}
 const links = document.querySelectorAll("a, button");
 
 links.forEach((el) => {
