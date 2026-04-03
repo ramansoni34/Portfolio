@@ -34,40 +34,58 @@ gsap.utils.toArray(".card:not(.hero)").forEach((card) => {
   });
 });
 
-gsap.from(".project-card", {
-  y: 40,
-  opacity: 0,
-  duration: 0.6,
-  stagger: 0.2,
-  ease: "power2.out",
-  scrollTrigger: {
-    trigger: ".projects",
-    start: "top 80%"
+gsap.fromTo(".project-card", 
+  {
+    y: 40,
+    opacity: 0
+  },
+  {
+    y: 0,
+    opacity: 1,
+    duration: 0.6,
+    stagger: 0.2,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".projects",
+      start: "top 80%"
+    }
   }
-});
+);
 
-gsap.from(".about h2", {
-  y: 50,
-  opacity: 0,
-  duration: 0.8,
-  ease: "power2.out",
-  scrollTrigger: {
-    trigger: ".about",
-    start: "top 85%"
+gsap.fromTo(".about h2", 
+  {
+    y: 50,
+    opacity: 0
+  },
+  {
+    y: 0,
+    opacity: 1,
+    duration: 0.8,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".about",
+      start: "top 85%"
+    }
   }
-})
+);
 
-gsap.from(".about p", {
-  y: 40,
-  opacity: 0,
-  duration: 0.8,
-  delay: 0.2,
-  ease: "power2.out",
-  scrollTrigger: {
-    trigger: ".about",
-    start: "top 85%"
+gsap.fromTo(".about p", 
+  {
+    y: 40,
+    opacity: 0
+  },
+  {
+    y: 0,
+    opacity: 1,
+    duration: 0.8,
+    delay: 0.2,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".about",
+      start: "top 85%"
+    }
   }
-});
+);
 
 gsap.fromTo(".skills-list span", 
   {
@@ -88,19 +106,31 @@ gsap.fromTo(".skills-list span",
   }
 );
 
-gsap.from(".hero h1", {
+gsap.fromTo(".hero h1",
+  {
     y: 60,
-    opacity :0,
+    opacity: 0
+  },
+  {
+    y: 0,
+    opacity: 1,
     duration: 0.8,
-    delay: 0.2,
-})
+    delay: 0.2
+  }
+);
 
-gsap.from(".hero p", {
+gsap.fromTo(".hero p",
+  {
     y: 30,
-    opacity: 0,
+    opacity: 0
+  },
+  {
+    y: 0,
+    opacity: 1,
     duration: 0.8,
     delay: 0.4
-});
+  }
+);
 
 gsap.to(".hero-img img", {
     y: -10,
