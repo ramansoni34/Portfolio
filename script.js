@@ -5,8 +5,6 @@ y: 0,});;
 
 let tl = gsap.timeline();
 
-
-
 tl.fromTo("nav", 
   { y: -80, opacity: 0 }, 
   { y: 0, opacity: 1, duration: 0.8, ease: "power2.out" }
